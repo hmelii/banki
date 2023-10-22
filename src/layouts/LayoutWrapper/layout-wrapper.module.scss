@@ -1,0 +1,15 @@
+@import '../../styles/media-queries';
+
+.layout-wrapper {
+  margin: auto;
+  max-width: 137.6rem;
+  padding: 0 1.6rem;
+
+  @include for-screen-up(1024) {
+    padding: 0 2.4rem;
+  }
+
+  @include for-screen-up(1280) {
+    padding: 0 3.2rem;
+  }
+}

@@ -1,0 +1,24 @@
+.header {
+  background: var(--bg-color-primary-white);
+  box-shadow: 0 1px 2px 0 rgba(22, 33, 54, 0.16);
+  position: relative;
+  z-index: 15;
+
+  &__layout {
+    display: flex;
+    align-items: center;
+    gap: 3.2rem;
+  }
+
+  &__logo {
+    flex: 0 1 auto;
+  }
+
+  &__menu {
+    flex: 1 1 auto;
+  }
+
+  &__actions {
+    flex: 0 1 auto;
+  }
+}

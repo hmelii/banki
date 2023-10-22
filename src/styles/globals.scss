@@ -1,0 +1,71 @@
+@import 'node_modules/reset-css';
+//@import 'media-queries';
+//@import 'fonts';
+@import 'colors';
+
+html,
+body {
+  height: 100%;
+}
+
+html {
+  text-rendering: optimizeLegibility;
+
+  color: var(--text-color-primary);
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+
+  overflow-y: scroll;
+  font-size: 62.5%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  @media screen and (prefers-reduced-motion: reduce) {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  background: #f4f5f8;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  text-align: left;
+  word-wrap: break-word;
+}
+
+input,
+button,
+select,
+textarea,
+html {
+  //font-family: Lack, sans-serif;
+}
+
+a {
+  //color: var(--text-color-primary-black);
+}
+
+*,
+*:focus,
+*:active {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+b,
+strong {
+  font-weight: bold;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+select,
+button,
+a,
+label {
+  cursor: pointer;
+}
