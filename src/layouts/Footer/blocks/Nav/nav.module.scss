@@ -1,0 +1,33 @@
+@import '../../../../styles/media-queries';
+
+.nav {
+  padding: 3.2rem 0;
+
+  &__list {
+    break-inside: avoid;
+    display: block;
+    column-count: 2;
+
+    @include for-screen-up(1280) {
+      display: flex;
+      column-count: 1;
+    }
+  }
+
+  &__item {
+    margin-bottom: 0.8rem;
+    font-size: 1.2rem;
+    line-height: 1.333;
+
+    @include for-screen-up(1280) {
+      margin: 0;
+      font-size: 1.4rem;
+      line-height: 1.42;
+    }
+  }
+
+  &__link {
+    color: #a4a9b5;
+    font-weight: 500;
+  }
+}

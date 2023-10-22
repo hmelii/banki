@@ -1,0 +1,215 @@
+@import '../../styles/media-queries';
+
+.button {
+  $button: &;
+  border: 0;
+  margin: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  text-decoration: none;
+  box-sizing: border-box;
+
+  -webkit-tap-highlight-color: transparent;
+
+  cursor: pointer;
+  outline: 0;
+  overflow: hidden;
+  position: relative;
+  text-overflow: ellipsis;
+  touch-action: manipulation;
+  transition:
+    all 0.2s ease-in-out,
+    visibility 0s;
+  user-select: none;
+  white-space: nowrap;
+  gap: 0.4rem;
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+
+  &:hover {
+    &:not(span) {
+      @media (hover: hover) {
+        transform: scale(1.02);
+      }
+    }
+  }
+
+  &:active {
+    &:hover {
+      &:not(span) {
+        @media (hover: hover) {
+          transform: scale(1.06);
+        }
+      }
+    }
+  }
+
+  &_fluid {
+    width: 100%;
+  }
+
+  svg {
+    display: block;
+  }
+
+  &_size {
+    &-l {
+      font-size: 1.8rem;
+      height: 4.8rem;
+      line-height: 1.6;
+      padding: 1rem 1.6rem;
+
+      gap: 1.2rem;
+
+      #{$button}__before {
+        margin-left: -1rem;
+      }
+
+      #{$button}__after {
+        margin-right: -1rem;
+      }
+    }
+
+    &-m {
+      height: 4rem;
+      padding: 0 1.6rem;
+      font-size: 1.6rem;
+      line-height: 1.5;
+      gap: 1.4rem;
+
+      #{$button}__before {
+        margin-left: -1rem;
+      }
+
+      #{$button}__after {
+        margin-right: -1rem;
+      }
+    }
+
+    &-s {
+      font-size: 1.2rem;
+      line-height: 1.333;
+      gap: 0.4rem;
+
+      padding: 0.4rem 0.8rem;
+      border: 1px solid;
+      border-radius: 1.6rem;
+    }
+
+    &-icon {
+      padding: 0;
+      width: 4.7rem;
+      height: 4.7rem;
+
+      @include for-screen-up(1024) {
+        width: 5rem;
+        height: 5rem;
+      }
+    }
+  }
+
+  &_variant {
+    &-default {
+      background: var(--bg-color-primary-blue);
+      color: var(--text-color-primary-white);
+
+      &:hover {
+        background: var(--bg-color-primary-blue-hover);
+      }
+
+      &:active {
+        background: var(--bg-color-primary-blue-active);
+      }
+
+      &:disabled {
+        background: var(--color-secondary-7);
+        color: var(--color-secondary-31);
+      }
+    }
+
+    &-light {
+      background: #fe9e00;
+      color: var(--text-color-primary-white);
+      text-decoration: none;
+    }
+
+    &-link {
+      background-color: transparent;
+      border: 0.1rem solid var(--color-stroke-1);
+      color: var(--text-color-primary);
+      text-decoration: none;
+    }
+
+    &-ghost {
+      &:hover {
+        background: var(--color-secondary-7);
+      }
+
+      &:active {
+        background: var(--color-secondary-7);
+      }
+
+      &:disabled {
+        background: var(--color-secondary-7);
+        color: var(--color-secondary-31);
+      }
+    }
+
+    &-unstyled {
+      background: none;
+      border: 0;
+      border-radius: 0;
+      padding: 0;
+      text-align: left;
+      white-space: normal;
+    }
+  }
+
+  &_shape {
+    &-round {
+      border-radius: 0.8rem;
+    }
+
+    &-circle {
+      border-radius: 5.4rem;
+
+      @include for-screen-up(640) {
+        border-radius: 6.7rem;
+      }
+
+      @include for-screen-up(1024) {
+        border-radius: 7.1rem;
+      }
+
+      @include for-screen-up(1366) {
+        border-radius: 7.6rem;
+      }
+
+      @include for-screen-up(1680) {
+        border-radius: 9rem;
+      }
+    }
+  }
+
+  &_loading {
+    cursor: wait;
+  }
+
+  &__spinner {
+    animation: spin 1.2s linear infinite;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

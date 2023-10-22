@@ -1,5 +1,5 @@
 import { ElementType, FC, PropsWithChildren } from 'react'
-import { PropsWithClassName } from '@/types/props-with-className'
+import { PropsWithClassName } from '@/types/props-with-className.type'
 import clsx from 'clsx'
 import styles from './heading.module.scss'
 

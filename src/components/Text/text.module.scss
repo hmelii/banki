@@ -1,0 +1,58 @@
+@import '../../styles/media-queries';
+
+.text {
+  font-size: 1.4rem;
+  line-height: 1.42;
+
+  p {
+    margin: 0 0 1.6rem;
+  }
+
+  ul {
+    margin: 0 0 1.6rem;
+    padding: 0;
+    list-style: none;
+
+    & > li {
+      margin: 0 0 0.8rem;
+      padding-left: 1.6rem;
+      position: relative;
+
+      font-size: 1.4rem;
+      line-height: 1.5;
+
+      &:before {
+        content: '';
+        background: #f48100;
+        border-radius: 50%;
+        height: 0.8rem;
+        position: absolute;
+        top: 0.66rem;
+        left: 0;
+        width: 0.8rem;
+      }
+    }
+  }
+  h3 {
+    margin: 0.8rem 0;
+    font-size: 1.6rem;
+    line-height: 24px;
+
+    font-weight: 900;
+
+    @include for-screen-up(1280) {
+      margin: 2.4rem 0;
+
+      font-size: 2.4rem;
+      line-height: 1.5;
+    }
+  }
+
+  a {
+    border: none;
+    color: #039be5;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.2s;
+  }
+}

@@ -1,0 +1,26 @@
+@import '../../styles/media-queries';
+
+.cards {
+  --gap: 1.6;
+
+  @include for-screen-up(1280) {
+    --gap: 3.2;
+  }
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: calc(var(--gap) * 1rem);
+
+  &__item {
+    flex: 0 1 calc(50% - var(--gap) * 1 / 2 * 1rem);
+
+    @include for-screen-up(1280) {
+      flex: 0 1 calc(25% - var(--gap) * 3 / 4 * 1rem);
+    }
+  }
+
+  &__card {
+    display: flex;
+    height: 100%;
+  }
+}

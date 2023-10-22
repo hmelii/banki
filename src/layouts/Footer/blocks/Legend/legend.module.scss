@@ -1,0 +1,12 @@
+@import '../../../../styles/media-queries';
+
+.legend {
+  color: #a4a9b5;
+  font-size: 1.2rem;
+  line-height: 1.4;
+  text-align: center;
+
+  @include for-screen-up(1280) {
+    text-align: left;
+  }
+}

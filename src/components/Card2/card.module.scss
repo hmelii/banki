@@ -1,0 +1,104 @@
+@import '../../styles/media-queries';
+
+.card {
+  background: #fff;
+  border-radius: 0.8rem;
+  box-shadow: 0 0.1rem 0.2rem rgba(22, 33, 54, 0.16);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+
+  padding: 1.6rem;
+  transition: box-shadow 0.3s ease;
+
+  &__fig {
+    align-items: center;
+    border-radius: 0.8rem;
+    display: flex;
+
+    justify-content: center;
+    overflow: hidden;
+    width: 3.2rem;
+    height: 3.2rem;
+
+    @include for-screen-up(1280) {
+      width: 4.8rem;
+      height: 4.8rem;
+    }
+  }
+
+  &__fig-img {
+    max-height: 100%;
+    max-width: 100%;
+  }
+
+  &__header {
+    padding-bottom: 0.8rem;
+    @include for-screen-up(1280) {
+      padding-bottom: 1.6rem;
+    }
+  }
+
+  &__heading {
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1.4;
+    white-space: nowrap;
+    color: #162136;
+
+    margin-bottom: 0.4rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    @include for-screen-up(1280) {
+      font-size: 1.6rem;
+      line-height: 1.5;
+    }
+  }
+
+  &__summary {
+    color: #687082;
+    font-size: 1rem;
+    line-height: 1.2;
+    white-space: nowrap;
+
+    @include for-screen-up(1280) {
+      font-size: 1.2rem;
+      line-height: 1.3333;
+    }
+  }
+
+  &__info {
+    border-top: 0.1rem solid #eceff1;
+    padding-top: 0.8rem;
+
+    @include for-screen-up(1280) {
+      padding-top: 1.6rem;
+    }
+  }
+
+  &__amount,
+  &__percent {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+
+    margin-bottom: 0.4rem;
+
+    @include for-screen-up(1280) {
+      font-size: 1.8rem;
+      line-height: 1.5;
+    }
+  }
+
+  &__legend {
+    color: #687082;
+    font-size: 1rem;
+    line-height: 1.2;
+
+    @include for-screen-up(1280) {
+      font-size: 1.2rem;
+      line-height: 1.5;
+    }
+  }
+}

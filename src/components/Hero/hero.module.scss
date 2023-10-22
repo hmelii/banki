@@ -1,0 +1,45 @@
+@import '../../styles/media-queries';
+
+.hero {
+  margin-bottom: 0.8rem;
+
+  @include for-screen-up(1280) {
+    margin-bottom: 3rem;
+  }
+
+  &__heading {
+    text-align: center;
+
+    @include for-screen-up(1280) {
+      text-align: left;
+    }
+  }
+
+  &__side {
+    background-color: #fff;
+    bottom: 0;
+    box-shadow:
+      0 8px 16px rgba(22, 33, 54, 0.08),
+      0 4px 16px rgba(22, 33, 54, 0.08),
+      0 8px 16px rgba(22, 33, 54, 0.08);
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 1.6rem;
+
+    @include for-screen-up(1280) {
+      position: static;
+      box-shadow: none;
+      background: none;
+      padding: 0;
+    }
+  }
+
+  &__body {
+    margin-top: 0.8rem;
+  }
+}

@@ -1,0 +1,26 @@
+@import '../../styles/media-queries';
+
+.companies {
+  &__side-button {
+    width: 100%;
+    @include for-screen-up(1280) {
+      width: auto;
+    }
+  }
+
+  &__section {
+    margin-bottom: 8rem;
+  }
+
+  &__footer {
+    margin-bottom: -3.2rem;
+  }
+
+  &__heading-button {
+    width: 100%;
+
+    @include for-screen-up(1280) {
+      width: auto;
+    }
+  }
+}

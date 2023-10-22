@@ -1,0 +1,13 @@
+.copyright {
+  color: #a4a9b5;
+
+  & * {
+    font-size: 1.2rem !important;
+    line-height: 1.3333;
+  }
+
+  &__link {
+    color: #a4a9b5;
+    font-weight: 500;
+  }
+}

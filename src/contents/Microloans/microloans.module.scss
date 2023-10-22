@@ -1,0 +1,30 @@
+@import '../../styles/media-queries';
+
+.microloans {
+  &__heading-body {
+    display: none;
+    color: #687082;
+    font-size: 1.4rem;
+    line-height: 1.5;
+
+    @include for-screen-up(1280) {
+      display: block;
+    }
+  }
+
+  &__section {
+    margin-bottom: 8rem;
+  }
+
+  &__footer {
+    margin-bottom: -3.2rem;
+  }
+
+  &__filters {
+    margin-bottom: 0.8rem;
+  }
+
+  &__zaimer {
+    margin-bottom: 3.2rem;
+  }
+}

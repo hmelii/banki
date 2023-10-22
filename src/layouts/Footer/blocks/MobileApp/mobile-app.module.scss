@@ -1,0 +1,69 @@
+@import '../../../../styles/media-queries';
+
+.mobile-app {
+  background-color: #eceff1;
+
+  background-position: 100% 0;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border-radius: 1.6rem;
+  padding: 1.6rem 2.2rem;
+  text-align: center;
+
+  @include for-screen-up(768) {
+    padding: 3.2rem 6.4rem;
+  }
+
+  @include for-screen-up(1280) {
+    background-image: url(/banki/images/footer/mobile-app/bg.webp);
+    text-align: left;
+  }
+
+  &__heading {
+    margin: 0;
+    color: #162136;
+    font-size: 1.8rem;
+
+    font-weight: 500;
+    line-height: 1.3333;
+    user-select: none;
+    text-align: center;
+
+    @include for-screen-up(1280) {
+      font-size: 2.4rem;
+      text-align: left;
+    }
+  }
+
+  &__link {
+    background-color: #162136;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    border-radius: 0.8rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0;
+    height: 4.3rem;
+    width: 16.4rem;
+  }
+
+  &__heading2 {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+  }
+
+  &__summary2 {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-top: 0.4rem;
+  }
+
+  &__footer {
+    display: none;
+    @include for-screen-up(1280) {
+      display: block;
+    }
+  }
+}

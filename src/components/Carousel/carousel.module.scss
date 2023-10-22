@@ -1,0 +1,16 @@
+.carousel {
+  &__list {
+    display: flex;
+    gap: 1.8rem;
+    overflow-y: hidden;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  &__item {
+    flex: 0 0 calc(25% - 1.8rem);
+    max-width: 30.4rem;
+    min-width: 26rem;
+    flex-grow: 1;
+  }
+}

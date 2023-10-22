@@ -1,7 +1,7 @@
 import { FC, PropsWithChildren } from 'react'
 
 import styles from './RootLayout.module.scss'
-import { PropsWithClassName } from '@/types/props-with-className'
+import { PropsWithClassName } from '@/types/props-with-className.type'
 import clsx from 'clsx'
 
 export const RootLayout: FC<PropsWithChildren & PropsWithClassName> = ({

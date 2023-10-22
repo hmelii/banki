@@ -8,6 +8,16 @@ const nextConfig = {
     })
 
     return config
+  },
+  basePath: '/banki',
+  async redirects() {
+    return [
+      {
+        source: '/',
+        destination: '/companies',
+        permanent: true
+      }
+    ]
   }
 }
 

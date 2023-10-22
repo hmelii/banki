@@ -1,0 +1,58 @@
+@import '../../../../styles/media-queries';
+
+.organization {
+  &__heading {
+    font-size: 2rem;
+    line-height: 1.4;
+    font-weight: 900;
+
+    @include for-screen-up(1280) {
+      font-size: 3.2rem;
+      line-height: 1.25;
+    }
+  }
+  &__fig {
+    min-height: 40px;
+    width: 100px;
+    margin: auto;
+  }
+
+  &__img {
+    width: 100%;
+    display: block;
+  }
+
+  &__card {
+    text-align: center;
+    padding: 1.6rem;
+
+    @include for-screen-up(1024) {
+      padding: 3.2rem;
+    }
+  }
+
+  &__phone {
+    font-size: 1.4rem;
+    line-height: 1.5;
+  }
+
+  &__license {
+    color: rgba(33, 33, 33, 0.34);
+    font-size: 1.2rem;
+    line-height: 1.3333;
+  }
+
+  &__list {
+    overflow-y: hidden;
+    overflow-x: auto;
+    position: relative;
+  }
+
+  &__next-button {
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+  }
+}

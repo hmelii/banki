@@ -1,0 +1,9 @@
+@import '../../styles/media-queries';
+
+.main-layout {
+  padding-top: 4.8rem;
+
+  @include for-screen-up(1280) {
+    padding-top: 0;
+  }
+}

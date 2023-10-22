@@ -1,24 +1,52 @@
+@import '../../styles/media-queries';
+
 .header {
   background: var(--bg-color-primary-white);
   box-shadow: 0 1px 2px 0 rgba(22, 33, 54, 0.16);
-  position: relative;
-  z-index: 15;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4.8rem;
+  z-index: 20;
+
+  @include for-screen-up(1280) {
+    height: auto;
+    position: static;
+  }
 
   &__layout {
     display: flex;
+    height: inherit;
     align-items: center;
     gap: 3.2rem;
+    justify-content: space-between;
+
+    @include for-screen-up(1280) {
+      justify-content: flex-start;
+    }
   }
 
   &__logo {
     flex: 0 1 auto;
+    order: 2;
+
+    @include for-screen-up(1280) {
+      order: 1;
+    }
   }
 
-  &__menu {
-    flex: 1 1 auto;
+  &__nav {
+    order: 1;
+
+    @include for-screen-up(1280) {
+      order: 2;
+      flex: 1 1 auto;
+    }
   }
 
   &__actions {
     flex: 0 1 auto;
+    order: 3;
   }
 }

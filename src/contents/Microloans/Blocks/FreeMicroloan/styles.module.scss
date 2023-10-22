@@ -1,0 +1,65 @@
+@import '../../../../styles/media-queries';
+
+.microloan {
+  padding: 3.2rem;
+
+  &__heading {
+    font-size: 2rem;
+    font-weight: 900;
+    line-height: 1.3333;
+
+    @include for-screen-up(1200) {
+      font-size: 2.4rem;
+    }
+  }
+
+  &__img {
+    width: 7.7rem;
+  }
+
+  &__link {
+    align-items: center;
+    border: 1px solid #d6d9e0;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    min-height: 48px;
+    min-width: 112px;
+    overflow: hidden;
+    transition: all 0.2s ease 0s;
+
+    &:hover {
+      border: 1px solid transparent;
+      box-shadow:
+        0 8px 16px rgba(22, 33, 54, 0.08),
+        0 -8px 16px rgba(22, 33, 54, 0.04),
+        0 16px 24px rgba(22, 33, 54, 0.16);
+    }
+
+    @include for-screen-up(576) {
+      min-height: 64px;
+    }
+  }
+
+  &__item {
+    width: 40%;
+
+    @include for-screen-up(768) {
+      width: 20.83333%;
+    }
+  }
+
+  &__list {
+    overflow-y: hidden;
+    overflow-x: auto;
+    position: relative;
+  }
+
+  &__next-button {
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+  }
+}

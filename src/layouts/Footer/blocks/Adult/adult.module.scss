@@ -1,0 +1,9 @@
+@import '../../../../styles/media-queries';
+
+.adult {
+  display: none;
+
+  @include for-screen-up(1280) {
+    display: block;
+  }
+}

@@ -1,0 +1,19 @@
+@import '../../../../styles/media-queries';
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 3.2rem;
+
+  &__link {
+    display: none;
+
+    &:first-child {
+      display: block;
+    }
+
+    @include for-screen-up(1280) {
+      display: block;
+    }
+  }
+}

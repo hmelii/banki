@@ -1,0 +1,50 @@
+@import '../../styles/media-queries';
+
+.crumbs {
+  border-top: 0.1rem solid #d6d9e0;
+  padding: 1.6rem 0;
+
+  @include for-screen-up(1280) {
+    padding: 3.2rem 0;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 1.3333;
+    white-space: nowrap;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__item {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    color: #a4a9b5;
+
+    &:before {
+      background: rgba(164, 169, 181, 0.7);
+      border-radius: 50%;
+      content: '';
+      height: 0.4rem;
+      margin: 0 0.6rem;
+      width: 0.4rem;
+    }
+
+    &:first-child {
+      &:before {
+        display: none;
+      }
+    }
+  }
+
+  &__link {
+    color: #687082;
+    text-decoration: none;
+  }
+}

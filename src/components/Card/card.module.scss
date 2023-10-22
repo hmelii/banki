@@ -1,0 +1,60 @@
+@import '../../styles/media-queries';
+
+.card {
+  $card: &;
+
+  background-color: var(--bg-color-primary-white);
+  border-radius: 0.4rem;
+  display: flex;
+  padding: 0.8rem;
+  text-align: center;
+  transition: box-shadow 0.2s;
+  gap: 0.8rem;
+  flex-direction: column;
+
+  @include for-screen-up(1280) {
+    gap: 1.6rem;
+  }
+
+  &__actions {
+    display: none;
+
+    @include for-screen-up(1280) {
+      display: block;
+    }
+  }
+
+  &_empty {
+    background: none;
+    border: 0.1rem dashed #d6d9e0;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @include for-screen-up(1280) {
+    padding: 3.2rem;
+  }
+
+  &__license {
+    color: rgba(33, 33, 33, 0.34);
+    font-size: 1.2rem;
+    line-height: 1.5;
+  }
+
+  &__fig {
+    height: 4rem;
+    margin: 0 auto;
+    width: 10rem;
+
+    #{$card}_empty & {
+      width: auto;
+      height: auto;
+    }
+  }
+
+  &__fig-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}

@@ -1,0 +1,48 @@
+@import '../../../../styles/media-queries';
+
+.zaimer {
+  padding: 1.6rem;
+
+  @include for-screen-up(1280) {
+    padding: 1.6rem 3.2rem;
+  }
+
+  &__logo {
+    border-right: 0.1rem dashed #d6d9e0;
+    padding-right: 2.4rem;
+
+    svg {
+      display: block;
+    }
+  }
+
+  &__heading {
+    margin: 0;
+    color: #039be5;
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 1.3333;
+  }
+
+  &__summary {
+    color: #162136;
+    font-size: 1.6rem;
+    line-height: 1.333;
+  }
+
+  &__content {
+    padding-left: 0;
+
+    @include for-screen-up(1280) {
+      padding-left: 2.4rem;
+    }
+  }
+
+  &__footer {
+    display: none;
+
+    @include for-screen-up(1280) {
+      display: block;
+    }
+  }
+}

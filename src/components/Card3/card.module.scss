@@ -1,0 +1,47 @@
+@import '../../styles/media-queries';
+
+.card {
+  background-color: #fff;
+  border-radius: 0.8rem;
+  box-shadow: 0 0.1rem 0.2rem 0 rgba(22, 33, 54, 0.16);
+  box-sizing: border-box;
+  color: #162136;
+  font-size: 1.4rem;
+  line-height: 1.43;
+
+  position: relative;
+
+  @include for-screen-up(1280) {
+    font-size: 1.6rem;
+    line-height: 1.5;
+  }
+
+  &__image {
+    color: #f48100;
+  }
+
+  &__heading {
+    background: url('../../../public/images/arrow/right/24.svg') no-repeat 100%
+      50%;
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    @include for-screen-up(1280) {
+      background: no-repeat;
+    }
+  }
+
+  &__link {
+    display: block;
+    padding: 1.6rem;
+    color: #162136;
+
+    @include for-screen-up(1280) {
+      padding: 2.4rem;
+    }
+
+    &:hover {
+      color: var(--link-color-hovered);
+    }
+  }
+}

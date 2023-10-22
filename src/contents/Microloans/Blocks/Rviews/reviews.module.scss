@@ -1,0 +1,40 @@
+.reviews {
+  &__card {
+    padding: 3.2rem;
+  }
+
+  &__rate-text {
+    color: #687082;
+  }
+
+  &__fig {
+    min-height: 40px;
+    width: 100px;
+  }
+
+  &__img {
+    width: 100%;
+  }
+
+  &__card-heading {
+    font-size: 1.8rem;
+  }
+
+  &__date {
+    color: #687082;
+  }
+
+  &__list {
+    overflow-y: hidden;
+    overflow-x: auto;
+    position: relative;
+  }
+
+  &__next-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+  }
+}

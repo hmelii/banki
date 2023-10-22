@@ -1,0 +1,22 @@
+.faq {
+  padding: 3.2rem;
+  background-color: #daeeff;
+  border-radius: 0.8rem;
+
+  &__col {
+    display: flex;
+    align-items: center;
+
+    border-left: 1px solid #d6d9e0;
+
+    &:first-child {
+      border-left: 0;
+    }
+  }
+
+  &__heading {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 900;
+  }
+}
